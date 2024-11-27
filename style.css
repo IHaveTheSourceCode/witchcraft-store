@@ -1,0 +1,119 @@
+:root{
+    --search-border-color: rgba(0, 0, 0, 0.2);
+}
+
+body{
+    padding:0;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#page{
+    width: 100vw;
+    max-width: 1500px;
+}
+
+.search-bar-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    border: 3px solid var(--search-border-color);
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.top-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.search-bar-wrapper > input{
+    border: none;
+    font-size: 24px;
+}
+
+.search-bar-wrapper > input:focus{
+    outline: none;
+}
+
+.search-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    border-left: 2px solid var(--search-border-color);
+    background-color: transparent;
+}
+
+.search-btn:hover{
+    cursor: pointer;
+}
+
+.search-btn > img{
+    height: 60%;
+}
+
+.search-btn > img:hover{
+    opacity: 0.8;
+}
+
+.user-nav-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: transparent;
+    padding: 0;
+    margin-right: 10px;
+    border: none;
+}
+
+.header-nav-btn:hover{
+    background-color: var(--search-border-color);
+    cursor: pointer;
+}
+
+.header-nav-btn > img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.header-nav-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav-wrapper > p {
+    margin: 0;
+    height: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.header-img{
+    height: 150px;
+    margin: -50px;
+}
