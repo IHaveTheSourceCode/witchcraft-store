@@ -24,22 +24,22 @@
                             <p>Account</p>
                             <p>Login</p>
                         </div>
-                    </button>                    
-                    <button class="header-nav-btn wishlist-btn">
-                        <img src="images/icons/star-outline.svg" alt="" class="header-nav-icon">
-                        <div class="header-nav-wrapper">
-                            <p></p>
-                            <p>Wishlist</p>
-                        </div>
-                    </button>                    
+                    </button>                                      
                     <button class="header-nav-btn cart-btn">
                         <img src="images/icons/shopping-cart-icon.svg" alt="cart icon" class="header-nav-icon">
                         <div class="header-nav-wrapper">
-                            <p></p>
+                            <p>0 items</p>
                             <p>Cart</p>
                         </div>
                     </button>
                 </div>
+            </div>
+            <div class="header-img-center">
+                <h1>Magical Goods for Everyday Sorcery</h2>
+                <p>Everything a witch or wizard needs, all in one place.</p>
+                <button>Shop Now
+                    <img src="images/icons/arrow-right.svg">
+                </button>
             </div>
             <div class="bottom-nav">
                 <p class="categories-label">Shop by categories</p>
