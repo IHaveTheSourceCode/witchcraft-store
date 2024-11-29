@@ -34,12 +34,14 @@
                     </button>
                 </div>
             </div>
-            <div class="header-img-center">
-                <h1>Magical Goods for Everyday Sorcery</h2>
-                <p>Everything a witch or wizard needs, all in one place.</p>
-                <button>Shop Now
-                    <img src="images/icons/arrow-right.svg">
-                </button>
+            <div class="header-img-center-wrapper">
+                <div class="header-img-center">
+                    <h1>Magical Goods for Everyday Sorcery</h2>
+                    <p>Everything a witch or wizard needs, all in one place.</p>
+                    <button>Shop Now
+                        <img src="images/icons/arrow-right.svg">
+                    </button>
+                </div>
             </div>
             <div class="bottom-nav">
                 <p class="categories-label">Shop by categories</p>
