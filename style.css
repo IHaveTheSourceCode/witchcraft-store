@@ -155,7 +155,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-image: url("/images/backgrounds/wizard-background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: right;
     height: 600px;
     margin-left: 20px;
     border-radius: 20px;
@@ -193,4 +193,36 @@ input[type="search"]::-webkit-search-results-decoration {
 .header-img-center > button:hover{
     cursor: pointer;
     opacity: 0.9;
+}
+
+.categories-carousel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-left: 15px;
+
+}
+
+.categories-label{
+    margin-left: 20px;
+    font-size: 2rem;
+}
+
+.category-card-btn{
+    min-width: 200px;
+    aspect-ratio: 12/13;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.category-card-btn:hover{
+    cursor: pointer;
+}
+
+.category-card-btn > img{
+}
+
+.category-card-btn > p{
 }

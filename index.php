@@ -47,8 +47,32 @@
                 <p class="categories-label">Shop by categories</p>
                 <div class="categories-carousel">
                     <div class="category-card-btn">
-                        <p class="category-name"></p>
-                        <img class="card-img">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
+                    </div>
+                    <div class="category-card-btn">
+                        <img>
+                        <p></p>
                     </div>
                 </div>
             </div>
