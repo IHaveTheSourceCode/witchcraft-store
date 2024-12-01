@@ -198,7 +198,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .categories-carousel{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: nowrap;
     margin-left: 15px;
 
@@ -206,19 +206,24 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .categories-label{
     margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 15px;
     font-size: 2rem;
+    position: left;
 }
 
 .category-card-btn{
-    min-width: 200px;
+    min-width: 192px;
     aspect-ratio: 12/13;
-    margin-right: 10px;
+    margin-right: 20px;
     border-radius: 20px;
-    background-color: red;
+    background-color: var(--color-second);
 }
 
 .category-card-btn:hover{
     cursor: pointer;
+    transition: background-color 0.4s;
+    background-color: var(--color-active);
 }
 
 .category-card-btn > img{

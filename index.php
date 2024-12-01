@@ -48,31 +48,31 @@
                 <div class="categories-carousel">
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Wands</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Robes</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Books</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Cauldrons</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Pets</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Broomsticks</p>
                     </div>
                     <div class="category-card-btn">
                         <img>
-                        <p></p>
+                        <p>Sweets</p>
                     </div>
                 </div>
             </div>
