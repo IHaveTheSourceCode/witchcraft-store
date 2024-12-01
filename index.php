@@ -46,34 +46,34 @@
             <div class="bottom-nav">
                 <p class="categories-label">Shop by categories</p>
                 <div class="categories-carousel">
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Wands</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Robes</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Books</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Cauldrons</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Pets</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Broomsticks</p>
-                    </div>
-                    <div class="category-card-btn">
-                        <img>
-                        <p>Sweets</p>
-                    </div>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/wand.svg" alt="">
+                        <p class="category-card-description">Wands</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/hoodie.svg" alt="">
+                        <p class="category-card-description">Robes</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/spellbook.svg" alt="">
+                        <p class="category-card-description">Books</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/cauldron.svg" alt="">
+                        <p class="category-card-description">Cauldrons</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/pawn.svg" alt="">
+                        <p class="category-card-description">Pets</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/broomstick.svg" alt="">
+                        <p class="category-card-description">Broomsticks</p>
+                    </button>
+                    <button class="category-card-btn">
+                        <img class="category-card-img" src="images/items_icons/sweets.svg" alt="">
+                        <p class="category-card-description">Sweets</p>
+                    </button>
                 </div>
             </div>
         </div>
