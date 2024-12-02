@@ -38,8 +38,8 @@
                 <div class="header-img-center">
                     <h1>Magical Goods for Everyday Sorcery</h2>
                     <p>Everything a witch or wizard needs, all in one place.</p>
-                    <button>Shop Now
-                        <img src="images/icons/arrow-right.svg">
+                    <button class="shop-now-btn">Shop Now
+                        <img class="shop-now-btn-image" src="images/icons/arrow-right.svg">
                     </button>
                 </div>
             </div>

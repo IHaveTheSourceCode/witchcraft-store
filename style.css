@@ -173,27 +173,47 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: 50px;
 }
 
-.header-img-center > button{
+.shop-now-btn{
     margin-top: 100px;
     margin-left: 50px;
     color: var(--color-white-pillow);
     background-color: var(--color-active);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 10px 15px 10px 15px;
     border: none;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
 }
 
-.header-img-center > button > img{
-    margin-left: 8px;
-    width: 25px;
+.shop-now-btn-image{
+    width: 10px;
+    opacity: 0;
+    margin-left: -10px;
+    padding: 0px;
+    transition: all 0.4s;
 }
 
-.header-img-center > button:hover{
+.shop-now-btn:hover{
     cursor: pointer;
-    opacity: 0.9;
+}
+
+.shop-now-btn:hover .shop-now-btn-image{
+    margin-left: 8px;
+    width: 24px;
+    opacity: 1;
+}
+
+.shop-now-btn:active{
+    opacity: 0.8;
+}
+
+
+.shop-now-btn:focus .shop-now-btn-image{
+    margin-left: 8px;
+    width: 24px;
+    opacity: 1;
 }
 
 .categories-carousel{
@@ -232,14 +252,6 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: var(--color-active);
 }
 
-.category-card-btn:hover .category-card-img{
-    filter: invert(96%) sepia(84%) saturate(275%) hue-rotate(295deg) brightness(106%) contrast(96%);
-}
-
-.category-card-btn:hover .category-card-description{
-    color: var(--color-white-pillow);
-}
-
 .category-card-img{
     width: 120px;
     margin-top: 20px;
@@ -248,10 +260,20 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-user-drag: none;
 }
 
+.category-card-btn:hover .category-card-img,
+.category-card-btn:focus .category-card-img{
+    filter: invert(91%) sepia(3%) saturate(615%) hue-rotate(333deg) brightness(108%) contrast(96%);
+}
+
 .category-card-description{
     font-size: 1.6rem;
     font-weight: bold;
-    transition: color 0.4s;
+    transition: filter 0.4s;
     color: var(--color-contrast);
     user-select: none;
+}
+
+.category-card-btn:hover .category-card-description,
+.category-card-btn:focus .category-card-description{
+    filter: invert(91%) sepia(3%) saturate(615%) hue-rotate(333deg) brightness(108%) contrast(96%);
 }
