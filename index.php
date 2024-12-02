@@ -16,7 +16,9 @@
                         <img src="images/icons/search-icon.svg" alt="search icon">
                     </button>
                 </div>
-                <img src="images/icons/diagon-alley.svg" class="header-img">
+                <a href="#">
+                    <img src="images/icons/diagon-alley.svg" class="header-img">
+                </a>    
                 <div class="user-nav-wrapper">
                     <button class="header-nav-btn login-btn">
                         <img src="images/icons/wizard-icon.svg" alt="login icon" class="header-nav-icon">
