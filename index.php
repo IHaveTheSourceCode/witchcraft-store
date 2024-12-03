@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div id="page">
+        <div id="page-main">
             <div class="top-nav">
                 <div class="search-bar-wrapper">
-                    <input type="search" placeholder="Search for item...">
+                    <input class="header-search-input" type="search" placeholder="Search for item...">
                     <button class="search-btn">
                         <img src="images/icons/search-icon.svg" alt="search icon">
                     </button>
@@ -79,6 +78,5 @@
                 </div>
             </div>
         </div>
-    </header>
 </body>
 </html>
