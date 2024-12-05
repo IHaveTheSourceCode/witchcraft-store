@@ -15,7 +15,7 @@
             </a>
         </div>
         <h1>Sign Up</h1>
-        <p>Create account and enjoy everything a wizard needs in one place </p>
+        <p>Create account and enjoy everything a wizard needs all in one place </p>
         <form action="" type="POST">
             <label for="FName">First Name:</label>
             <input type="text" id="FName" name="FName" required>

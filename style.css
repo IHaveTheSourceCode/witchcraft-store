@@ -289,5 +289,50 @@ input[type="search"]::-webkit-search-results-decoration {
 /* REGISTER PAGE */
 #register-page{
     width: 100%;
-    max-width: 700px;
+    max-height: 100vh;
+    max-width: 600px;
+}
+
+.register-nav-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-back-btn{
+    background-color: transparent;
+    border: none;
+    color: var(--color-inactive);
+    font-size: 2.6rem;
+}
+
+.register-back-btn:hover{
+    cursor: pointer;    
+    color: var(--color-white-pillow);
+}
+
+.register-nav-wrapper > a{
+    width: 200px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+#register-page > h1{
+    display: flex;
+    justify-self: center;
+    font-size: 2.4rem;
+}
+
+#register-page > p{
+    font-size: 1.2rem;
+    color: var(--color-inactive);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form > input{
+    background-color: red;
 }
