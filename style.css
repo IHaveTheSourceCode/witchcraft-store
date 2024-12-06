@@ -333,6 +333,15 @@ form{
     flex-direction: column;
 }
 
+form > label{
+    font-size: 1.2rem;
+}
+
 form > input{
-    background-color: red;
+    font-size: 1.6rem;
+    color: var(--color-white-pillow);
+    background-color: var(--color-second);
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
 }
