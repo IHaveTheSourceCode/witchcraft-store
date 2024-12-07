@@ -28,7 +28,7 @@
             <label for="addres">Addres</label>
             <input type="text" id="addres" name="addres" required>
             <button type="submit" id="register-submit-btn">
-                Submit
+                SIGN UP
             </button>
         </form>
     </div>
