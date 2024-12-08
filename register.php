@@ -9,7 +9,7 @@
 <body>
     <div id="register-page">
         <div class="register-nav-wrapper">
-            <button class="register-back-btn">&lt</button>
+            <button class="register-back-btn" onclick="window.history.back()">&lt</button>
             <a href="index.php">
                 <img src="images/icons/diagon-alley.svg" alt="">
             </a>
@@ -17,20 +17,24 @@
         <h1>Sign Up</h1>
         <p>Create account and enjoy everything a wizard needs all in one place </p>
         <form action="" type="POST">
-            <label for="FName">First Name:</label>
+            <label for="FName">FIRST NAME:</label>
             <input type="text" id="FName" name="FName" required>
-            <label for="LName">Last Name:</label>
+            <label for="LName">LAST NAME:</label>
             <input type="text" id="LName" name="LName" required>
-            <label for="email">Email:</label>
+            <label for="email">EMAIL:</label>
             <input type="email" id="email" name="email" required>
-            <label for="password">Password:</label>
+            <label for="password">PASSWORD:</label>
             <input type="password: id="password" name="password" required>
-            <label for="addres">Addres</label>
+            <label for="addres">ADDRES</label>
             <input type="text" id="addres" name="addres" required>
-            <button type="submit" id="register-submit-btn">
+            <button type="submit" class="form-btn register-submit-btn">
                 SIGN UP
             </button>
         </form>
+        <div class="login-label-wrapper">
+            <p>Allready have an account?</p>
+        </div>
+        <button class="form-btn register-login-btn">LOG IN</button>
     </div>
 </body>
 </html>
