@@ -29,7 +29,7 @@ body{
     width: 100vw;
     max-width: 1500px;
     padding-top: 30px;
-
+    margin-bottom: 30px;
 }
 
 .search-bar-wrapper{
@@ -166,7 +166,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .header-img-center{
     max-width: 1500px;
     width: calc(100% - 40px);
-    background-image: url("/images/backgrounds/wizard-background.png");
+    background-image: url("/magic_store/images/backgrounds/wizard-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -345,7 +345,8 @@ form{
     flex-direction: column;
 }
 
-form > label{
+form label
+{
     font-size: 0.8rem;
     font-weight: bold;
     color: var(--color-white-pillow);
@@ -353,7 +354,7 @@ form > label{
     margin-left: 2px;
 }
 
-form > input{
+form input{
     font-size: 1.2rem;
     color: var(--color-white-pillow);
     background-color: var(--color-second);
@@ -419,4 +420,23 @@ input:-webkit-autofill:focus{
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 10px;
+}
+
+.register-form-inputs-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.register-form-inputs-wrapper > .register-form-inner-wrapper:nth-child(2){
+    margin-right: -20px;
+}
+
+.register-form-inner-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.register-form-inner-wrapper > input{
+    width: 80%;
 }

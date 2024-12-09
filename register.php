@@ -1,3 +1,19 @@
+<?php
+// $showAlert = false;
+// $showError = false; 
+// $exists = false;
+
+// if($_SERVER["REQUEST_METHOD"] == "POST"){
+//     include "dbconnect.php";
+
+//     $fname = $_POST["fname"];
+//     $lname = $_POST["lname"];
+//     $fname = $_POST["fname"];
+//     $fname = $_POST["fname"];
+//     $fname = $_POST["fname"];
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +33,22 @@
         <h1>Sign Up</h1>
         <p>Create account and enjoy everything a wizard needs all in one place </p>
         <form action="" type="POST">
-            <label for="FName">FIRST NAME:</label>
-            <input type="text" id="FName" name="FName" required>
-            <label for="LName">LAST NAME:</label>
-            <input type="text" id="LName" name="LName" required>
+            <div class="register-form-inputs-wrapper">
+                <div class="register-form-inner-wrapper">
+                    <label for="fname">FIRST NAME:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div class="register-form-inner-wrapper">
+                    <label for="lname">LAST NAME:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+            </div>
             <label for="email">EMAIL:</label>
             <input type="email" id="email" name="email" required>
             <label for="password">PASSWORD:</label>
             <input type="password" id="password" name="password" required>
-            <label for="addres">ADDRES</label>
-            <input type="text" id="addres" name="addres" required>
+            <label for="address">ADDRESS:</label>
+            <input type="text" id="address" name="address" required>
             <button type="submit" class="form-btn register-submit-btn">
                 SIGN UP
             </button>
