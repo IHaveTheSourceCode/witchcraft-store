@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap');
+
 :root{
     --search-border-color: rgba(0, 0, 0, 0.2);
     --color-main: #00001B;
@@ -6,10 +8,14 @@
     --color-white-pillow: #FAF6F0;
     --color-inactive: #9FA1AD;
     --color-active: #5758ff;
+    --font-main: "Outfit", serif;
+    --font-second: "Anton", sans-serif;
 }
 
 body{
+    font-family: var(--font-main);
     width: 100vw;
+    max-width: 100%;
     padding:0;
     margin: 0;
     display:flex;
@@ -142,6 +148,7 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     align-items: center;
     color: var(--color-white-pillow);
+    font-family: var(--font-main);
 }
 
 .header-img{
@@ -171,7 +178,9 @@ input[type="search"]::-webkit-search-results-decoration {
 .header-img-center > h1{
     padding-top: 100px;
     margin-left: 50px;
-    font-size: 3.8rem;
+    font-size: 3.4rem;
+    font-weight: normal;
+    font-family: var(--font-second);
 }
 
 .header-img-center > p{
@@ -245,6 +254,7 @@ input[type="search"]::-webkit-search-results-decoration {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-main);
     min-width: 192px;
     aspect-ratio: 12/13;
     margin-right: 20px;
@@ -288,9 +298,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* REGISTER PAGE */
 #register-page{
-    width: 100%;
-    max-height: 100vh;
+    width: 100vw;
     max-width: 500px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
 }
 
 .register-nav-wrapper{
@@ -312,9 +324,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .register-nav-wrapper > a{
-    width: 200px;
-    margin-top: -20px;
-    margin-bottom: -20px;
+    width: clamp(100px, 150px, 200px);
+    margin-top: -5%;
+    margin-bottom: -5%;
 }
 
 #register-page > h1{
@@ -347,7 +359,7 @@ form > input{
     background-color: var(--color-second);
     padding: 15px;
     border-radius: 4px;
-    border: 1px solid var(--color-inactive);
+    border: 1px solid gray;
     margin-bottom: 20px;
 }
 
@@ -367,6 +379,7 @@ input:-webkit-autofill:focus{
     padding: 10px;
     border-radius: 20px;
     transition: all 0.2s ease;
+    font-family: var(--font-main);
 }
 
 .register-submit-btn{
@@ -402,7 +415,7 @@ input:-webkit-autofill:focus{
 }
 
 .login-label-wrapper > p{
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 1.6rem, 1.8rem);
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 10px;

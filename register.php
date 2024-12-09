@@ -24,7 +24,7 @@
             <label for="email">EMAIL:</label>
             <input type="email" id="email" name="email" required>
             <label for="password">PASSWORD:</label>
-            <input type="password: id="password" name="password" required>
+            <input type="password" id="password" name="password" required>
             <label for="addres">ADDRES</label>
             <input type="text" id="addres" name="addres" required>
             <button type="submit" class="form-btn register-submit-btn">
