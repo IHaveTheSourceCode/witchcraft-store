@@ -16,11 +16,11 @@ body{
     font-family: var(--font-main);
     width: 100vw;
     max-width: 100%;
+    height: 100vh;
     padding:0;
     margin: 0;
     display:flex;
     justify-content: center;
-    align-items: center;
     background-color: var(--color-main);
     color: var(--color-white-pillow)
 }
@@ -298,8 +298,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* REGISTER PAGE */
 #register-page{
-    width: 100vw;
+    width: 90vw;
     max-width: 500px;
+    height: 100%;
+    align-content: center;
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 25px;
@@ -424,19 +426,13 @@ input:-webkit-autofill:focus{
 
 .register-form-inputs-wrapper{
     display: flex;
+    justify-content: space-between;
     width: 100%;
 }
 
-.register-form-inputs-wrapper > .register-form-inner-wrapper:nth-child(2){
-    margin-right: -20px;
-}
 
 .register-form-inner-wrapper{
     display: flex;
     flex-direction: column;
-    width: 100%;
-}
-
-.register-form-inner-wrapper > input{
-    width: 80%;
+    width: 47%;
 }
