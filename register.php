@@ -1,39 +1,44 @@
 <?php
-$showAlert = false;
-$showError = false; 
-$exists = false;
+// $showAlert = false;
+// $showError = false; 
+// $exists = false;
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include "dbconnect.php";
+// if($_SERVER["REQUEST_METHOD"] == "POST"){
+//     include "dbconnect.php";
 
-    $fname = $_POST["fname"];
-    $lname = $_POST["lname"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $address = $_POST["address"];
+//     $fname = filter_var($_POST["fname"], );
+//     $lname = $_POST["lname"];
+//     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+//     $password = $_POST["password"];
+//     $address = $_POST["address"];
     
-    $sql = "Select * from users where email = '$email'";
+//     $sql = "Select * from users where email = '$email'";
 
-    //connects to the database and executes sql script
-    $result = mysqli_query($conn, $sql);
-    //checks if there are any users registered with inputed email
-    $num = mysqli_num_rows($result);
+//     //connects to the database and executes sql script
+//     $result = mysqli_query($conn, $sql);
+//     //checks if there are any users registered with inputed email
+//     $num = mysqli_num_rows($result);
 
-    if($num == 0){
-        if($exists == false){
-            $hash = password_hash($password, PASSWORD_DEFAULT);
+//     if($num == 0){
+//         if($exists == false){
+//             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO 'users' ('fname', 'lname', 'email', 'password', 'address', 'DateOfAddmission')
-            VALUES ('$fname', '$lname', '$email', '$hash', '$address', current_timestamp())";
-            $result = mysqli_query($conn, $sql);
+//             $sql = "INSERT INTO 'users' ('fname', 'lname', 'email', 'password', 'address', 'DateOfAddmission')
+//             VALUES ('$fname', '$lname', '$email', '$hash', '$address', current_timestamp())";
             
-            //if query call is successful show alert for the user
-            if($result){
-                $showAlert = true;
-            }
-        }
-    }
-}
+//             $result = mysqli_query($conn, $sql);
+            
+//             //if query call is successful show alert for the user
+//             if($result){
+//                 $showAlert = true;
+//             }
+//         }        
+//     }
+//     //if email is allready in database 
+//     if($num > 0){
+//         $exists = "Email is not available";
+//     }
+// }
 ?>
 
 <!DOCTYPE html>
