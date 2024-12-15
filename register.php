@@ -1,44 +1,45 @@
 <?php
-// $showAlert = false;
-// $showError = false; 
-// $exists = false;
+$showAlert = false;
+$showError = false; 
+$exists = false;
 
-// if($_SERVER["REQUEST_METHOD"] == "POST"){
-//     include "dbconnect.php";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include "dbconnect.php";
 
-//     $fname = filter_var($_POST["fname"], );
-//     $lname = $_POST["lname"];
-//     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-//     $password = $_POST["password"];
-//     $address = $_POST["address"];
+    //saves and sanitizes inputs
+    $fname = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $lname = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+    $address = filter_input(INPUT_POST, "address", FILTER_SANITIZE_SPECIAL_CHARS);
     
-//     $sql = "Select * from users where email = '$email'";
+    $sql = "Select * from users where email = '$email'";
 
-//     //connects to the database and executes sql script
-//     $result = mysqli_query($conn, $sql);
-//     //checks if there are any users registered with inputed email
-//     $num = mysqli_num_rows($result);
+    //connects to the database and executes sql script
+    $result = mysqli_query($conn, $sql);
+    //checks if there are any users registered with inputed email
+    $num = mysqli_num_rows($result);
 
-//     if($num == 0){
-//         if($exists == false){
-//             $hash = password_hash($password, PASSWORD_DEFAULT);
+    if($num == 0){
+        if($exists == false){
+            $hash = password_hash($password, PASSWORD_DEFAULT);
 
-//             $sql = "INSERT INTO 'users' ('fname', 'lname', 'email', 'password', 'address', 'DateOfAddmission')
-//             VALUES ('$fname', '$lname', '$email', '$hash', '$address', current_timestamp())";
+            $sql = "INSERT INTO 'users' ('fname', 'lname', 'email', 'password', 'address', 'DateOfAddmission')
+            VALUES ('$fname', '$lname', '$email', '$hash', '$address', current_timestamp())";
             
-//             $result = mysqli_query($conn, $sql);
+            $result = mysqli_query($conn, $sql);
             
-//             //if query call is successful show alert for the user
-//             if($result){
-//                 $showAlert = true;
-//             }
-//         }        
-//     }
-//     //if email is allready in database 
-//     if($num > 0){
-//         $exists = "Email is not available";
-//     }
-// }
+            //if query call is successful show alert for the user
+            if($result){
+                $showAlert = true;
+            }
+        }        
+    }
+    //if email is allready in database 
+    if($num > 0){
+        $exists = "Email is not available";
+    }
+}
 ?>
 
 <!DOCTYPE html>
