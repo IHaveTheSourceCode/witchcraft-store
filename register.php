@@ -6,7 +6,7 @@ $exists = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "dbconnect.php";
 
-    //saves and sanitizes inputs
+    //saves and sanitizes form inputs
     $fname = filter_input(INPUT_POST, "fname", FILTER_SANITIZE_SPECIAL_CHARS);
     $lname = filter_input(INPUT_POST, "lname", FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
