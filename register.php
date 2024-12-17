@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <h1>Sign Up</h1>
         <p>Create account and enjoy everything a wizard needs all in one place </p>
-        <form action="" type="POST">
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="register-form-inputs-wrapper">
                 <div class="register-form-inner-wrapper">
                     <label for="fname">FIRST NAME:</label>
