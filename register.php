@@ -64,17 +64,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="register-form-inputs-wrapper">
                 <div class="register-form-inner-wrapper">
                     <label for="fname">FIRST NAME:</label>
-                    <input type="text" id="fname" name="fname" required>
+                    <input type="text" id="fname" name="fname" pattern="[a-zA-Z]+" required>
                 </div>
                 <div class="register-form-inner-wrapper">
                     <label for="lname">LAST NAME:</label>
-                    <input type="text" id="lname" name="lname" required>
+                    <input type="text" id="lname" name="lname" pattern="[a-zA-Z]+" required>
                 </div>
             </div>
             <label for="email">EMAIL:</label>
             <input type="email" id="email" name="email" required>
             <label for="password">PASSWORD:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" minlength="6" required>
             <label for="address">ADDRESS:</label>
             <input type="text" id="address" name="address" required>
             <button type="submit" class="form-btn register-submit-btn">

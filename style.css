@@ -347,8 +347,7 @@ form{
     flex-direction: column;
 }
 
-form label
-{
+form label{
     font-size: 0.8rem;
     font-weight: bold;
     color: var(--color-white-pillow);
@@ -435,4 +434,22 @@ input:-webkit-autofill:focus{
     display: flex;
     flex-direction: column;
     width: 47%;
+}
+
+form input:valid{
+    border: 1px solid green;
+    outline: 1px solid green;
+}
+
+form input:user-invalid{
+    border: 1px solid red;
+    outline: 1px solid red;
+}
+
+#fname{
+    text-transform: capitalize;
+}
+
+#lname{
+    text-transform: capitalize;
 }
