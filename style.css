@@ -453,3 +453,18 @@ form input:user-invalid{
 #lname{
     text-transform: capitalize;
 }
+
+#action-info-popup{
+    position: fixed;
+    top: 0;
+    transform: translate(-50%, -50px);
+    padding: 15px;
+    left: 50vw;
+    background-color: green;
+    transition: all 0.4s;
+}
+
+
+#action-info-popup{
+    transform:translate(-50%, 0);
+}
