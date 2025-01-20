@@ -454,8 +454,13 @@ form input:user-invalid{
     text-transform: capitalize;
 }
 
-.reg-succes{
+#email{
+    border-color: var(--color-inactive);
+}
+
+.reg-success{
     color: green;
+    font-size: 2rem;
 }
 
 .reg-error{
@@ -464,4 +469,8 @@ form input:user-invalid{
 
 #email-feedback{
     display: inline-block;
+    font-size: 1rem;
+    height: 1rem;
+    margin-top: -15px;
+    margin-bottom: 10px;
 }
