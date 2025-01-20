@@ -1,6 +1,6 @@
 const emailInput = document.getElementById("email");
 const emailFeedback = document.getElementById("email-feedback");
-const submitButton = document.getElementById("submitButton");
+const submitButton = document.querySelector(".register-submit-btn");
 
 emailInput.addEventListener("input", function(){
     const email = emailInput.value.trim();

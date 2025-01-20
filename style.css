@@ -453,3 +453,15 @@ form input:user-invalid{
 #lname{
     text-transform: capitalize;
 }
+
+.reg-succes{
+    color: green;
+}
+
+.reg-error{
+    color: red;
+}
+
+#email-feedback{
+    display: inline-block;
+}

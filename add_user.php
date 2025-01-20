@@ -2,7 +2,6 @@
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include "dbconnect.php";
 
-    //saves and sanitizes form inputs
     $fname = $_POST("fname");
     $lname = $_POST("lname");
     $email = $_POST("email");
@@ -14,5 +13,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     address, DateOfAdmission) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP()";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sssss", $fname, $lname, $email, $hash, $address);
+    $stmt->execute();
 }
 ?>

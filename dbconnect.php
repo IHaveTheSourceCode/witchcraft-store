@@ -2,7 +2,7 @@
 $server_name = "localhost";
 $username = "root";
 $password = "root";
-$database = "users";
+$database = "magic_shop";
 
-$conn = new mysqli($server_name, $username, $password);
+$conn = new mysqli($server_name, $username, $password, $database);
 ?>
