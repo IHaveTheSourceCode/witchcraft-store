@@ -442,8 +442,7 @@ form input:valid{
 }
 
 form input:user-invalid{
-    border: 1px solid red;
-    outline: 1px solid red;
+    border: 2px solid red;
 }
 
 #fname{
@@ -452,10 +451,6 @@ form input:user-invalid{
 
 #lname{
     text-transform: capitalize;
-}
-
-#email{
-    border-color: var(--color-inactive);
 }
 
 .reg-success{

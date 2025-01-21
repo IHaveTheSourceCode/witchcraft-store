@@ -17,7 +17,7 @@
         </div>
         <h1>Sign Up</h1>
         <p>Create account and enjoy everything a wizard needs all in one place </p>
-        <form method="post" action="add_user.php">
+        <form method="post" action="add_user.php" id="registration-form">
             <div class="register-form-inputs-wrapper">
                 <div class="register-form-inner-wrapper">
                     <label for="fname">FIRST NAME:</label>

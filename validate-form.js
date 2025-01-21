@@ -7,6 +7,7 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// event listener for checking if email is present in the database
 emailInput.addEventListener("input", function(){
     const email = emailInput.value.trim();
 
@@ -41,3 +42,15 @@ emailInput.addEventListener("input", function(){
         xhttp.send();
     }
 })
+
+// event listeners for checking if other inputs are valid and present
+// const form = document.getElementById("registration-form");
+// form.addEventListener("submit", function(event){
+//     const inputs = form.querySelectorAll("input");
+//     inputs.forEach(input => {
+//         if(!input.checkValidity()){
+//             input.style.border = "2px solid red";
+//             input.style.outline = "none";
+//         }
+//     })
+// })
