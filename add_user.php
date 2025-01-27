@@ -1,7 +1,6 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     include "dbconnect.php";
-    echo "test";
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
     $email = $_POST["email"];

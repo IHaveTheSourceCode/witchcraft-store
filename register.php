@@ -42,7 +42,7 @@
         <div class="login-label-wrapper">
             <p>Allready have an account?</p>
         </div>
-        <button class="form-btn register-login-btn">LOG IN</button>
+        <button class="form-btn register-login-btn" onclick="location.href = 'login.php';">LOG IN</button>
     </div>
 </body>
 </html>
