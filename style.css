@@ -469,3 +469,34 @@ form input:user-invalid{
     margin-top: -15px;
     margin-bottom: 10px;
 }
+
+#register-card-wrapper-error{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    border: 2px solid red;
+    border-radius: 15px;
+    height: 200px;
+    padding: 30px;
+    font-size: 1.6rem;
+}
+
+#register-card-wrapper-successful{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    border: 2px solid green;
+    border-radius: 15px;
+    height: 200px;
+    padding: 30px;
+    font-size: 1.6rem;
+}
+
+#register-card{
+    justify-items: center;
+}
+
+#register-card > a{
+    text-decoration: underline;
+    color: var(--color-active);
+}
