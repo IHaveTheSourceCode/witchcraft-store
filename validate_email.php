@@ -1,7 +1,7 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "GET"){
     include "dbconnect.php";
-    $email = $_GET["email"]; 
+    $email = $GET["email"];
     
     $sql = "SELECT * from users WHERE email = ?";
     $stmt = $conn->prepare($sql);
@@ -16,5 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
     }elseif($num_rows === 0){
         echo "available";
     }
+
+    $stmt->close();
+    $conn->close();
 }
 ?>
