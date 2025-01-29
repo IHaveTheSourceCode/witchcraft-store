@@ -500,3 +500,14 @@ form input:user-invalid{
     text-decoration: underline;
     color: var(--color-active);
 }
+
+#login-error-popup{
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: var(--color-second);
+}

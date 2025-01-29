@@ -1,3 +1,8 @@
+<?php 
+session_start();
+$error = $_SESSION['error'] ?? '';
+unset($_SESSION['error']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="validate-form.js" defer></script> -->
 </head>
 <body>
+    <?php if($error){
+        echo "<div id='login-error-popup'>$error</div>";
+    }?>
     <div id="register-page">
         <div class="register-nav-wrapper">
             <button class="register-back-btn" onclick="window.history.back()">&lt</button>

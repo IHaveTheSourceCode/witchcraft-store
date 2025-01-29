@@ -1,10 +1,12 @@
 <?php
+session_start();
+
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     include "dbconnect.php";
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT password FROM users WHERE email = ?";
+    $sql = "SELECT password,userID FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -15,10 +17,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $row = $result->fetch_assoc();
         $hashed_password = $row['password'];
         if(password_verify($password, $hashed_password)){
-            echo "Valid";
+            // $_SESSION['userID'] = $row['userID'];
+            echo $row['userID'];
         }else{
-            echo "Invalid email or password";
+            #refresh site and pass error value to login page
+            $_SESSION['error'] = "Invalid email or password";
+            header('Location: ./login.php');
         }
+    }else{
+        $_SESSION['error'] = "Invalid email or password";
+        header('Location: ./login.php');
     }
     $stmt->close();
     $conn->close();

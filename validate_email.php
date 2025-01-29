@@ -1,7 +1,7 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "GET"){
     include "dbconnect.php";
-    $email = $GET["email"];
+    $email = $_GET["email"];
     
     $sql = "SELECT * from users WHERE email = ?";
     $stmt = $conn->prepare($sql);
