@@ -17,8 +17,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $row = $result->fetch_assoc();
         $hashed_password = $row['password'];
         if(password_verify($password, $hashed_password)){
-            // $_SESSION['userID'] = $row['userID'];
-            echo $row['userID'];
+            $_SESSION['userID'] = $row['userID'];
+            header('Location: ./index.php');
         }else{
             #refresh site and pass error value to login page
             $_SESSION['error'] = "Invalid email or password";

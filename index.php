@@ -23,7 +23,12 @@
                         <img src="images/icons/wizard-icon.svg" alt="login icon" class="header-nav-icon">
                         <div class="header-nav-wrapper">
                             <p>Account</p>
-                            <p>Login</p>
+                            <?php
+                            session_start();
+                            if(!$_SESSION['userID']){
+                                echo '<p>Login</p>';
+                            }
+                            ?>
                         </div>
                     </button>                                      
                     <button class="header-nav-btn cart-btn">
