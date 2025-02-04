@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Shop</title>
     <link rel="stylesheet" href="style.css">
+    <?php include 'home-page-logic.php'; ?>
 </head>
 <body>
         <div id="page-main">
@@ -24,10 +25,12 @@
                         <div class="header-nav-wrapper">
                             <p>Account</p>
                             <?php
-                            session_start();
-                            if(!$_SESSION['userID']){
+                            if (session_status() === PHP_SESSION_NONE) {
+                                session_start();
+                            };
+                            if(!isset($_SESSION['userID'])){
                                 echo '<p>Login</p>';
-                            }
+                            };
                             ?>
                         </div>
                     </button>                                      

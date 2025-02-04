@@ -232,6 +232,10 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 1;
 }
 
+.bottom-nav{
+    padding-bottom: 35px;
+}
+
 .categories-carousel{
     display: flex;
     flex-direction: row;
