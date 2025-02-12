@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE){
+    session_start();
+    session_regenerate_id(true);
+}
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     include "dbconnect.php";
