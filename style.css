@@ -515,3 +515,41 @@ form input:user-invalid{
     border-radius: 10px;
     background-color: var(--color-second);
 }
+
+#about-acc-main{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border: 2px solid var(--color-inactive);
+    border-radius: 15px;
+}
+
+.user-acc-param{
+    padding-bottom: 15px;
+}
+
+.param-description{
+    font-size: 2rem;
+}
+
+.user-acc-param-value{
+    font-size: 1.1rem;
+}
+
+#delete-acc-btn{
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 7px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+}
+
+#delete-acc-btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
