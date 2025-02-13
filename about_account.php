@@ -1,6 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+    session_regenerate_id(true);
 };
 //if user is not logged in
 if(!isset($_SESSION['userID'])){
@@ -11,7 +12,7 @@ if(!isset($_SESSION['userID'])){
 include "dbconnect.php";
 $sql = "SELECT fname,lname,email,address,DateOfAdmission FROM users WHERE userID = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $_SESSION['userID']);
+$stmt->bind_param("i", $_SESSION['userID']);
 $stmt->execute();
 $result = $stmt->get_result();
 $rows = $result->fetch_assoc();
@@ -49,7 +50,7 @@ $DateOfAdmission = $rows['DateOfAdmission'];
             <div class="user-acc-param-value"><?php echo $DateOfAdmission ?></div>
         </div>
         <form method="POST" action="delete_account.php" onsubmit="return confirm('Are you sure you want to delete your account?');">
-            <button id="delete-acc-btn" type="submit">DELETE ACCOUNT</button>
+            <button id="delete-acc-btn" name="delete_account" type="submit">DELETE ACCOUNT</button>
         </form>
     </div>
 </body>
