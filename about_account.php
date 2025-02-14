@@ -34,6 +34,7 @@ $fullname = $fname . " " . $lname;
 </head>
 <body>
     <div id="about-acc-main">
+        <button class="about-acc-return-btn" onclick="location.href = 'index.php'">&lt</button>
         <div class="user-acc-param">
             <div class="param-description">Name:</div>
             <div class="user-acc-param-value"><?php echo htmlspecialchars($fullname) ?></div>

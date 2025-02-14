@@ -553,3 +553,17 @@ form input:user-invalid{
     opacity: 0.9;
     cursor: pointer;
 }
+
+.about-acc-return-btn{
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: var(--color-inactive);
+    max-width: 35px;
+    margin-left: -10px;
+    border: none;
+}
+
+.about-acc-return-btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
