@@ -21,6 +21,7 @@ $lname = $rows['lname'];
 $email = $rows['email'];
 $address = $rows['address'];
 $DateOfAdmission = $rows['DateOfAdmission'];
+$fullname = $fname . " " . $lname;
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +36,19 @@ $DateOfAdmission = $rows['DateOfAdmission'];
     <div id="about-acc-main">
         <div class="user-acc-param">
             <div class="param-description">Name:</div>
-            <div class="user-acc-param-value"><?php echo $fname, " ", $lname ?></div>
+            <div class="user-acc-param-value"><?php echo htmlspecialchars($fullname) ?></div>
         </div>
         <div class="user-acc-param">
             <div class="param-description">Email:</div>
-            <div class="user-acc-param-value"><?php echo $email ?></div>
+            <div class="user-acc-param-value"><?php echo htmlspecialchars($email) ?></div>
         </div>
         <div class="user-acc-param">
             <div class="param-description">Address:</div>
-            <div class="user-acc-param-value"><?php echo $address ?></div>
+            <div class="user-acc-param-value"><?php echo htmlspecialchars($address) ?></div>
         </div>
         <div class="user-acc-param">
             <div class="param-description">Creation date:</div>
-            <div class="user-acc-param-value"><?php echo $DateOfAdmission ?></div>
+            <div class="user-acc-param-value"><?php echo htmlspecialchars($DateOfAdmission) ?></div>
         </div>
         <form method="POST" action="delete_account.php" onsubmit="return confirm('Are you sure you want to delete your account?');">
             <button id="delete-acc-btn" name="delete_account" type="submit">DELETE ACCOUNT</button>
