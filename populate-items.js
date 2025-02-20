@@ -1,20 +1,44 @@
 // creates items and populates home page
 const container = document.querySelector("#home-page-products");
 
-function createElement(itemID){
-    let itemContainer = document.createElement("div");
+function createElement(imagePath, description, price, itemID){
+    const itemContainer = document.createElement("div");
     itemContainer.classList.add("home-item-container");
-    let imageContainer = document.createElement("div");
-    imageContainer.classList.add("home-image-container");
-    let image = document.createElement("img");
-    image.classList.add("home-image");
 
-    let itemDescription = document.createElement("div");
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("home-image-container");
+
+    const image = document.createElement("img");
+    image.classList.add("home-image");
+    image.src = imagePath;
+
+    const itemDescription = document.createElement("div");
     itemDescription.classList.add("home-item-description");
-    let priceTag = document.createElement("div");
+    itemDescription.textContent = description;
+
+    const bottomContainer = document.createElement("div");
+    bottomContainer.classList.add("home-bottom-container");
+
+    const priceTag = document.createElement("div");
     priceTag.classList.add("home-price-tag");
-    let addToCartBtn = document.createElement("button");
+    priceTag.textContent = price;
+
+    const addToCartBtn = document.createElement("button");
     addToCartBtn.classList.add("home-add-to-cart-btn");
+
+    imageContainer.appendChild(image);
+    bottomContainer.append(priceTag, addToCartBtn);
+    itemContainer.append(imageContainer, itemDescription, bottomContainer);
+
+    return itemContainer;
 }
 
-// 
+fetch('fetchShopItems.php').then(res => res.json())
+.then(items => {
+    items.forEach(item => {
+        container.appendChild(createElement(item.itemID, item.image_path,
+             item.description, item.price));
+    })
+}).catch(error => {
+    console.error("Error fetching shop items:", error);
+})
