@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Shop</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="populate-items.js" defer></script>
     <?php include 'home-page-logic.php'; ?>
 </head>
 <body>
@@ -85,6 +86,8 @@
                     </button>
                 </div>
             </div>
+            <h2 id="products-header">Products:</h2>
+            <div id="home-page-products"></div>
         </div>
 </body>
 </html>

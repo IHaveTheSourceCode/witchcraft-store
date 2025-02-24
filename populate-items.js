@@ -25,6 +25,8 @@ function createElement(imagePath, description, price, itemID){
 
     const addToCartBtn = document.createElement("button");
     addToCartBtn.classList.add("home-add-to-cart-btn");
+    addToCartBtn.textContent = "Add to cart";
+
 
     imageContainer.appendChild(image);
     bottomContainer.append(priceTag, addToCartBtn);
@@ -35,9 +37,11 @@ function createElement(imagePath, description, price, itemID){
 
 fetch('fetchShopItems.php').then(res => res.json())
 .then(items => {
+    console.log(items);
     items.forEach(item => {
-        container.appendChild(createElement(item.itemID, item.image_path,
-             item.description, item.price));
+        console.log("test");
+        container.appendChild(createElement(item.image_path,
+             item.description, item.price, item.itemID));
     })
 }).catch(error => {
     console.error("Error fetching shop items:", error);

@@ -22,7 +22,8 @@ body{
     display:flex;
     justify-content: center;
     background-color: var(--color-main);
-    color: var(--color-white-pillow)
+    color: var(--color-white-pillow);
+    overflow-x: hidden;
 }
 
 #page-main{
@@ -239,8 +240,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .categories-carousel{
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    flex-wrap: nowrap;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-left: 15px;
 
 }
@@ -259,6 +260,7 @@ input[type="search"]::-webkit-search-results-decoration {
     justify-content: center;
     align-items: center;
     font-family: var(--font-main);
+    margin-bottom: 20px;
     min-width: 192px;
     aspect-ratio: 12/13;
     margin-right: 20px;
@@ -566,4 +568,70 @@ form input:user-invalid{
 .about-acc-return-btn:hover{
     opacity: 0.9;
     cursor: pointer;
+}
+
+#products-header{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-family: var(--font-main);
+}
+
+#home-page-products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+
+.home-item-container{
+    border: 5px solid var(--color-second);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-image-container{
+    max-width: 250px;
+}
+
+.home-image{
+    width: 80%;
+    aspect-ratio: 1/1;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.home-item-description{
+    font-size: 1.2rem;
+}
+
+.home-bottom-container{
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.home-price-tag{
+    font-family: var(--font-second);
+    font-size: 1.25rem;
+}
+
+.home-add-to-cart-btn{
+    font-size: 1.2rem;
+    background-color: var(--color-second);
+    color: var(--color-white-pillow);
+    /* border: 1px solid white; */
+    border: none;
+    border-radius: 10px;
+}
+
+.home-add-to-cart-btn:hover{
+    cursor: pointer;
+    color: var(--color-active);
 }
