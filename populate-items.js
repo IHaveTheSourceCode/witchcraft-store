@@ -37,9 +37,7 @@ function createElement(imagePath, description, price, itemID){
 
 fetch('fetchShopItems.php').then(res => res.json())
 .then(items => {
-    console.log(items);
     items.forEach(item => {
-        console.log("test");
         container.appendChild(createElement(item.image_path,
              item.description, item.price, item.itemID));
     })

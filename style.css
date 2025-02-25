@@ -571,18 +571,20 @@ form input:user-invalid{
 }
 
 #products-header{
-    margin-left: 10px;
+    margin-left: 20px;
     margin-bottom: 10px;
+    margin-top: -5px;
     font-size: 2.2rem;
     font-family: var(--font-main);
+    font-weight: normal;
 }
 
 #home-page-products{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding-bottom: 20px;
 }
 
@@ -626,12 +628,19 @@ form input:user-invalid{
     font-size: 1.2rem;
     background-color: var(--color-second);
     color: var(--color-white-pillow);
-    /* border: 1px solid white; */
+    padding: 0 10px 0 10px;
     border: none;
     border-radius: 10px;
+    transition: all 0.2s;
 }
 
 .home-add-to-cart-btn:hover{
     cursor: pointer;
+    background-color: var(--color-white-pillow);
     color: var(--color-active);
+
+}
+
+.home-add-to-cart-btn:active{
+    transform: scale(0.95);
 }

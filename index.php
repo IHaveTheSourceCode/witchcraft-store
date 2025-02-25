@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="bottom-nav">
-                <p class="categories-label">Shop by categories</p>
+                <p class="categories-label">Shop by categories:</p>
                 <div class="categories-carousel">
                     <button class="category-card-btn">
                         <img class="category-card-img" src="images/items_icons/wand.svg" alt="">
