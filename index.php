@@ -6,6 +6,7 @@
     <title>Magic Shop</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="populate-items.js" defer></script>
+    <script type="text/javascript" src="populate_items_category.js" defer></script>
     <?php include 'home-page-logic.php'; ?>
 </head>
 <body>
@@ -48,7 +49,7 @@
                 <div class="header-img-center">
                     <h1>Magical Goods for Everyday Sorcery</h2>
                     <p>Everything a witch or wizard needs, all in one place.</p>
-                    <button class="shop-now-btn">Shop Now
+                    <button class="shop-now-btn" onclick="location.href='#products-header'">Shop Now
                         <img class="shop-now-btn-image" src="images/icons/arrow-right.svg">
                     </button>
                 </div>
@@ -56,31 +57,31 @@
             <div class="bottom-nav">
                 <p class="categories-label">Shop by categories:</p>
                 <div class="categories-carousel">
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="wand">
                         <img class="category-card-img" src="images/items_icons/wand.svg" alt="">
                         <p class="category-card-description">Wands</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="robe">
                         <img class="category-card-img" src="images/items_icons/hoodie.svg" alt="">
                         <p class="category-card-description">Robes</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="book">
                         <img class="category-card-img" src="images/items_icons/spellbook.svg" alt="">
                         <p class="category-card-description">Books</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="cauldron">
                         <img class="category-card-img" src="images/items_icons/cauldron.svg" alt="">
                         <p class="category-card-description">Cauldrons</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="pet">
                         <img class="category-card-img" src="images/items_icons/pawn.svg" alt="">
                         <p class="category-card-description">Pets</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="broom">
                         <img class="category-card-img" src="images/items_icons/broomstick.svg" alt="">
                         <p class="category-card-description">Broomsticks</p>
                     </button>
-                    <button class="category-card-btn">
+                    <button class="category-card-btn" data-category="sweet">
                         <img class="category-card-img" src="images/items_icons/sweets.svg" alt="">
                         <p class="category-card-description">Sweets</p>
                     </button>
