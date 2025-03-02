@@ -586,11 +586,11 @@ form input:user-invalid{
 #home-page-products{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-content: start;
     gap: 20px;
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 20px;
-    min-height: 325px;
     transition: height 1s ease;
 }
 
