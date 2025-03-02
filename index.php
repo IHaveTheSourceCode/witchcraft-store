@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Shop</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@100..900&display=swap" as="style">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="populate-items.js" defer></script>
     <script type="text/javascript" src="populate_items_category.js" defer></script>
@@ -56,33 +57,33 @@
             </div>
             <div class="bottom-nav">
                 <p class="categories-label">Shop by categories:</p>
-                <div class="categories-carousel">
-                    <button class="category-card-btn" data-category="wand">
-                        <img class="category-card-img" src="images/items_icons/wand.svg" alt="">
+                <div class="categories-carousel" id="categories-carousel">
+                    <button class="category-card-btn" data-category="wand" onclick="location.href='#categories-carousel'">
+                        <img class="category-card-img" src="images/items_icons/wand.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Wands</p>
                     </button>
                     <button class="category-card-btn" data-category="robe">
-                        <img class="category-card-img" src="images/items_icons/hoodie.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/hoodie.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Robes</p>
                     </button>
                     <button class="category-card-btn" data-category="book">
-                        <img class="category-card-img" src="images/items_icons/spellbook.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/spellbook.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Books</p>
                     </button>
                     <button class="category-card-btn" data-category="cauldron">
-                        <img class="category-card-img" src="images/items_icons/cauldron.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/cauldron.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Cauldrons</p>
                     </button>
                     <button class="category-card-btn" data-category="pet">
-                        <img class="category-card-img" src="images/items_icons/pawn.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/pawn.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Pets</p>
                     </button>
                     <button class="category-card-btn" data-category="broom">
-                        <img class="category-card-img" src="images/items_icons/broomstick.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/broomstick.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Broomsticks</p>
                     </button>
                     <button class="category-card-btn" data-category="sweet">
-                        <img class="category-card-img" src="images/items_icons/sweets.svg" alt="">
+                        <img class="category-card-img" src="images/items_icons/sweets.svg" alt="" onclick="location.href='#categories-carousel'">
                         <p class="category-card-description">Sweets</p>
                     </button>
                 </div>

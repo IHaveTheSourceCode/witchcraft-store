@@ -1,4 +1,3 @@
-<!-- returns items with parsed category -->
 <?php
 include "dbconnect.php";
 
@@ -16,7 +15,7 @@ if(isset($_GET["item_type"])){
     $result = $stmt->get_result();
 
     $items = [];
-    foreach($result as $item){
+    foreach($result as $row){
         $items[] = [
             "itemID" => $row["item_id"],
             "image_path" => $row["image_path"],
