@@ -9,7 +9,6 @@ if(!isset($_SESSION['userID'])){
     exit();
 }
 if(isset($_POST['delete_account'])){
-    echo "valid";
     include "dbconnect.php";
     $sql = "DELETE FROM users WHERE userID = ?";
     $stmt = $conn->prepare($sql);

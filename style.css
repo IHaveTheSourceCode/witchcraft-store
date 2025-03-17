@@ -274,7 +274,7 @@ input[type="search"]::-webkit-search-results-decoration {
     transition: background-color 0.4s;
 }
 
-.category-card-btn:hover, .category-card-btn:focus{
+.category-card-btn:hover{
     cursor: pointer;
     background-color: var(--color-active);
 }
@@ -287,8 +287,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-user-drag: none;
 }
 
-.category-card-btn:hover .category-card-img,
-.category-card-btn:focus .category-card-img{
+.category-card-btn:hover .category-card-img{
     filter: invert(91%) sepia(3%) saturate(615%) hue-rotate(333deg) brightness(108%) contrast(96%);
 }
 
@@ -312,8 +311,7 @@ input[type="search"]::-webkit-search-results-decoration {
     user-select: none;
 }
 
-.category-card-btn:hover .category-card-description,
-.category-card-btn:focus .category-card-description{
+.category-card-btn:hover .category-card-description{
     filter: invert(91%) sepia(3%) saturate(615%) hue-rotate(333deg) brightness(108%) contrast(96%);
 }
 
@@ -557,7 +555,8 @@ form input:user-invalid{
     font-size: 1.1rem;
 }
 
-#delete-acc-btn{
+#delete-acc-btn,
+#logout-btn{
     font-size: 1.1rem;
     font-weight: bold;
     padding: 7px;
@@ -567,8 +566,10 @@ form input:user-invalid{
     background-color: red;
 }
 
-#delete-acc-btn:hover{
-    opacity: 0.9;
+#delete-acc-btn:hover,
+#logout-btn:hover{
+    background-color: hwb(0 0% 0% / 0.8);
+    color: var(--color-white-pillow);
     cursor: pointer;
 }
 
@@ -616,7 +617,8 @@ form input:user-invalid{
 }
 
 .home-image-container{
-    max-width: 250px;
+    display: flex;
+    justify-content: center;
 }
 
 .home-image{

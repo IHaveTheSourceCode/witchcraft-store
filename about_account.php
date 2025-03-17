@@ -16,10 +16,10 @@ $stmt->bind_param("i", $_SESSION['userID']);
 $stmt->execute();
 $result = $stmt->get_result();
 $rows = $result->fetch_assoc();
-$fname = $rows['fname'];
-$lname = $rows['lname'];
-$email = $rows['email'];
-$address = $rows['address'];
+$fname = htmlspecialchars($rows['fname']);
+$lname = htmlspecialchars($rows['lname']);
+$email = htmlspecialchars($rows['email']);
+$address = htmlspecialchars($rows['address']);
 $DateOfAdmission = $rows['DateOfAdmission'];
 $fullname = $fname . " " . $lname;
 ?>
@@ -51,6 +51,9 @@ $fullname = $fname . " " . $lname;
             <div class="param-description">Creation date:</div>
             <div class="user-acc-param-value"><?php echo htmlspecialchars($DateOfAdmission) ?></div>
         </div>
+        <form method="POST" action="logout.php" onsubmit="return confirm('Are you sure you want to log out?');">
+            <button id="logout-btn" name="logout" type="submit">LOGOUT</button>
+        </form>
         <form method="POST" action="delete_account.php" onsubmit="return confirm('Are you sure you want to delete your account?');">
             <button id="delete-acc-btn" name="delete_account" type="submit">DELETE ACCOUNT</button>
         </form>
