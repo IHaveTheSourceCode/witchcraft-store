@@ -11,16 +11,20 @@ function createCart($user_id) {
     $stmt = $conn->prepare("INSERT INTO carts (user_id) VALUES (?)");
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
+    return true;
 }
 
-// checks if user has any cart present already
-function checkCartPresence($user_id){
+function addItemToCart($user_id, $product_id, $quantity){
     global $conn;
-    $stmt = $conn->prepare
-}
 
-function addItemToCart($cart_id, $product_id, $quantity){
-    global $conn;
+    $cart_id = getCartID($user_id);
+
+    //creates cart if it's not already present
+    if(!$cart_id){
+        createCart($user_id);
+        $cart_id = getCartID($user_id);
+    }
+
     $stmt = $conn->prepare("INSERT INTO cart_items (cart_id, product_id, quantity) 
     VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE quantity = quantity + ?");
     $stmt->bind_param("iiii", $cart_id, $product_id, $quantity, $quantity);
@@ -51,9 +55,9 @@ function getCartID($user_id){
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
     $result = $stmt->get_result();
-    if ($row = $result->fetch_assoc()) { 
+    if($row = $result->fetch_assoc()) { 
         return $row['id'];
-    }
+    }else return null;
 }
 
 ?>
